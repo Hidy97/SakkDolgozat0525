@@ -8,11 +8,6 @@ class JatekTer {
         this.#lepes = 0;
         this.#allapotLista = ["♙", "♙", "♙", " ", " ", " ", "♟︎", "♟︎", "♟︎"]
 
-        const szuloElem = $("article");
-        for (let index = 0; index < this.#allapotLista; index++) {
-            this.#elemLista = new Cella(this.#lepes, this.#allapotLista[i], szuloElem);
-        }
-
         this.#jatekter();
         $(window).on("kapcsolas", (event) => {
 
@@ -20,11 +15,14 @@ class JatekTer {
     }
 
     #jatekter() {
-        
+        const szuloElem = $("article");
+        for (let index = 0; index < this.#allapotLista; index++) {
+            this.#elemLista = new Cella(this.#lepes, this.#allapotLista[i], szuloElem);
+        }        
     }
 
     #lepesekkeresese(kivalasztottIndex) {
-
+        this.#lepes = kivalasztottIndex;
     }
 
     #init() {

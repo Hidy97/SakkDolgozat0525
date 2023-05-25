@@ -7,7 +7,7 @@ class Cella {
         this.id = id;
         this.adat = adat;
 
-        szuloElem.append(`<div class="cella">${this.#adat}</div>`);
+        szuloElem.append(`<div id="${this.id}" class="cella">${this.#adat}</div>`);
 
         this.#divElem = $(".cella:last-child");
 
@@ -23,9 +23,9 @@ class Cella {
 
     #szinBeallit() {
         if (this.#id%2 == 0) {
-            this.#divElem.attr("background-color", "grey");
+            this.#divElem.css("background-color", "grey");
         }else{
-            this.#divElem.attr("background-color", "white");
+            this.#divElem.css("background-color", "white");
         }
     }
 
